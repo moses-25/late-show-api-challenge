@@ -1,3 +1,6 @@
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
+
 from .user import User
 from .guest import Guest
 from .episode import Episode
