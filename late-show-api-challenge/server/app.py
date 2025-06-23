@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
 from server.models import db
+from server.controllers.auth_controller import auth_bp
 
 def create_app():
     app = Flask(__name__)
@@ -10,6 +11,7 @@ def create_app():
     db.init_app(app)
     Migrate(app, db)
     JWTManager(app)
+    app.register_blueprint(auth_bp)
     # Register Blueprints here later
     return app
 
