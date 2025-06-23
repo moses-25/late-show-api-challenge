@@ -1,1 +1,9 @@
 echo "__pycache__/\n*.pyc\n*.db\n.env\n*.sqlite3\nmigrations/\nPipfile.lock" > .gitignore
+__pycache__/
+*.pyc
+*.db
+.env
+*.sqlite3
+migrations/
+Pipfile.lock
+venv/
